@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rlavallo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/21 08:44:44 by rlavallo          #+#    #+#             */
+/*   Updated: 2016/01/21 08:44:49 by rlavallo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	count(int n, size_t *len, int *w)
@@ -20,11 +32,11 @@ char		*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	pos;
-	int	w;
+	int		w;
 	char	*str;
 
 	count(n, &len, &w);
-	if((str = (char *)malloc(sizeof(*str) * (len +1))) == NULL)
+	if ((str = (char *)malloc(sizeof(*str) * (len + 1))) == NULL)
 		return (NULL);
 	pos = 0;
 	if (n < 0)

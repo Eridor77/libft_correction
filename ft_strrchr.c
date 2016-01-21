@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 17:40:18 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/08 15:07:38 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/01/21 08:40:13 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(s) + 1;
 	while (--len)
 	{
-		if (s[len] == (char) c)
+		if (s[len] == (char)c)
 			return ((char*)s + len);
 	}
 	if (s[len] == (char)c)

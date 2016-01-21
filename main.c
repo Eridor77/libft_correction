@@ -892,14 +892,13 @@ void	ft_putnbr_test()
 	ft_putnbr(10203);
 	ft_putnbr(-56);
 	ft_putnbr(2147483647);
-	//ft_putnbr(-2147483648);
+	ft_putnbr(-2147483648);
 	dup2(out, 1);
 	str[read(p[0], str, 100)] = 0;
 	close(p[0]);
 	close(p[1]);
 	close(out);
-	//if (strcmp(str, "01-11230010203-562147483647-2147483648") == 0)
-	if (strcmp(str, "01-11230010203-562147483647") == 0)
+	if (strcmp(str, "01-11230010203-562147483647-2147483648") == 0)
 		SUCCESS("ft_putnbr");
 	else
 		FAIL("ft_putnbr");
@@ -954,12 +953,11 @@ void	ft_putnbr_fd_test()
 	ft_putnbr_fd(10203, p[1]);
 	ft_putnbr_fd(-56, p[1]);
 	ft_putnbr_fd(2147483647, p[1]);
-	//ft_putnbr_fd(-2147483648, p[1]);
+	ft_putnbr_fd(-2147483648, p[1]);
 	str[read(p[0], str, 100)] = 0;
 	close(p[0]);
 	close(p[1]);
-	//if (strcmp(str, "01-11230010203-562147483647-2147483648") == 0)
-	if (strcmp(str, "01-11230010203-562147483647") == 0)
+	if (strcmp(str, "01-11230010203-562147483647-2147483648") == 0)
 		SUCCESS("ft_putnbr_fd");
 	else
 		FAIL("ft_putnbr_fd");

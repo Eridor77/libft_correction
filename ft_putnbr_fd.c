@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rlavallo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/03 15:53:59 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/10 15:02:30 by rlavallo         ###   ########.fr       */
+/*   Created: 2016/01/21 08:52:22 by rlavallo          #+#    #+#             */
+/*   Updated: 2016/01/21 09:01:45 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
-	{
-		ft_putchar_fd('-', 1);
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, 1);
-		ft_putnbr_fd(n % 10, 1);
-	}
+	if (n == -2147483648)
+		ft_putstr("-214748648");
 	else
 	{
-		n += 48;
-		write(fd, &n, 1);
+		if (n < 0)
+		{
+			ft_putchar_fd('-', 1);
+			n = -n;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr_fd(n / 10, 1);
+			ft_putnbr_fd(n % 10, 1);
+		}
+		else
+		{
+			n += 48;
+			write(fd, &n, 1);
+		}
 	}
 }
