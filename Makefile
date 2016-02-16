@@ -6,7 +6,7 @@
 #    By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:26:26 by rlavallo          #+#    #+#              #
-#    Updated: 2016/01/21 08:36:27 by rlavallo         ###   ########.fr        #
+#    Updated: 2016/02/16 11:46:59 by rlavallo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ SRC =	ft_strcmp.c \
 		ft_putnbr_fd.c
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME):
 	@$(GCC) -c $(SRC) libft.h
