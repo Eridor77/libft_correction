@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:30:30 by rlavallo          #+#    #+#             */
-/*   Updated: 2016/01/21 08:45:42 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:28:01 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-char	ft_toupper(int c);
-char	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
