@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:28:52 by rlavallo          #+#    #+#             */
-/*   Updated: 2015/09/28 16:18:50 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:51:31 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,18 @@ char	*ft_strcat(char *dest, const char *src)
 	int		i;
 	int		j;
 
-	if (dest != NULL && src != NULL)
+	i = 0;
+	s = dest;
+	while (s[i] != '\0')
+		i++;
+	j = 0;
+	while (src[j] != '\0')
 	{
-		i = 0;
-		s = dest;
-		while (s[i] != '\0')
-			i++;
-		j = 0;
-		while (src[j] != '\0')
-		{
-			s[i] = src[j];
-			i++;
-			j++;
-		}
-		s[i] = '\0';
-		return (s);
+		s[i] = src[j];
+		i++;
+		j++;
 	}
-	return (NULL);
+	s[i] = '\0';
+	return (s);
+
 }

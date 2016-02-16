@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/09/28 16:23:31 by rlavallo          #+#    #+#             */
-/*   Updated: 2015/09/28 16:23:45 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:56:49 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strstr(const char *s1, const char *s2)
 	int		i;
 	char	*ptr;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
 	i = 0;
 	ptr = (char *)s1;
 	if (!ptr[0] && !s2[0])
