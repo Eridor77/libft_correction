@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:28:52 by rlavallo          #+#    #+#             */
-/*   Updated: 2016/02/16 12:51:31 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 13:24:44 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ char	*ft_strcat(char *dest, const char *src)
 	}
 	s[i] = '\0';
 	return (s);
-
 }
